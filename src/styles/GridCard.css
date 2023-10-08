@@ -1,0 +1,13 @@
+.grid-character{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(100px, 320px));
+    justify-content: center;
+    grid-gap: 30px;
+    margin: 50px auto;
+}
+
+@media screen and (max-width: 1000px) {
+    .grid-character{
+        grid-template-columns: 320px;
+    }
+}
