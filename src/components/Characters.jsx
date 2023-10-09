@@ -2,6 +2,7 @@ import React from 'react'
 import { gql, useQuery } from '@apollo/client'
 import Character from './Character'
 import '../styles/GridCard.css'
+import '../styles/Loader.css'
 
 const Characters = () => {
   
@@ -21,7 +22,7 @@ const Characters = () => {
   
     return (
     <section className='grid-character'>
-        { loading && (<p>Cargando...</p>) }
+        { loading && (<div className='container-loader'><span className='loader'></span></div>)}
         { error && (<p>Error: </p>) }
         { data &&
             data.characters.results.map(character => (
@@ -30,7 +31,7 @@ const Characters = () => {
             
         }
     </section>
-  )
+  ) 
 }
 
 export default Characters

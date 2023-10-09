@@ -1,14 +1,16 @@
 import React from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import LandingPage from '../pages/LandingPage'
+import ListEpisodes from '../pages/ListEpisodes'
 
 const MyRoutes = () => {
   return (
-    <BrowserRouter>
+    <Router>
         <Routes>
             <Route exact path='/' element={<LandingPage />} />
+            <Route exact path='/episodes' element={<ListEpisodes />} />
         </Routes>
-    </BrowserRouter>
+    </Router>
   )
 }
 
