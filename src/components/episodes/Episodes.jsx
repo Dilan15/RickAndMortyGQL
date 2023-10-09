@@ -9,7 +9,7 @@ const Episodes = () => {
         episodes {
             results {
                 id
-                episodes
+                episode
                 air_date
             }
         }   
@@ -19,8 +19,9 @@ const Episodes = () => {
 const { loading, error, data } = useQuery(episodesQuery)
   
     return (
-    <section>
-        {loading && <p>Loading</p>}
+    <section style={{display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center'}}>
+        <h2 style={{color: 'rgb(88, 79, 79)'}}>Episodios de la temporada 1</h2>
+        {loading && (<div className='container-loader'><span className='loader'></span></div>)}
         {error && <p>Error:</p>}
         {data && 
             data.episodes.results.map(episode => (

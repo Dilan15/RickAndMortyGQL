@@ -11,15 +11,19 @@ const Menu = () => {
   return (
     <header className='menu-header'>
       <nav className='header-nav'>
-        <div className='nav-logo'>
-          <img className='logo-img' src={logo} alt="logo rick and morty" />
-        </div>
         <ul className='nav-ul'>
-          
-            <li className='ul-li'><FaUsers /> Personajes</li>
-      
-          <li className='ul-li'><FaGlobeAmericas /> Lugares</li>
-          <li className='ul-li'><BsFillCollectionPlayFill /> Episodios</li>
+        <li className='nav-logo'>
+          <img className='logo-img' src={logo} alt="logo rick and morty" />
+        </li>
+          <Link to="/" className='ul-link'>
+             <li className='link-li'><FaUsers /> Personajes</li> 
+          </Link>
+          <Link to="/places" className='ul-link'>
+            <li className='link-li'><FaGlobeAmericas /> Lugares</li> 
+          </Link>
+          <Link to="/episodes" className='ul-link'>
+            <li className='link-li'><BsFillCollectionPlayFill /> Episodios</li>
+          </Link>
         </ul>
       </nav>
     </header>

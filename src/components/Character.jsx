@@ -9,8 +9,16 @@ const Character = ({ character }) => {
       </div>
       <div style={{ marginTop: '15px', marginLeft: '7px' }}>
         <h3>{character.name}</h3>
-        <div style={{ marginTop: '10px' }}>
-          <span>{character.status}</span>
+        <div style={{ marginTop: '10px'}}>
+          <span 
+          style={{borderRadius:'50px', width:'75px', display:'block', textAlign:'center'}}
+            className={character.status === 'Alive'
+            ? 'green'
+            : 'red'
+          }
+          >
+            {character.status}
+            </span>
         </div>
       </div>
     </section>

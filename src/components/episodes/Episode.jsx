@@ -3,10 +3,10 @@ import React from 'react'
 const Episode = ({ episode }) => {
 
   return (
-    <section>
-        <span>{episode.id}</span>
+    <section style={{display:'flex', paddingTop:'10px'}}>
+        <span>{episode.id}</span> -
         <h3>{episode.name}</h3>
-        <span>{episode.air_date}</span> 
+        <span style={{ paddingLeft:'7px'}}>{episode.air_date}</span> 
     </section>
   )
 }

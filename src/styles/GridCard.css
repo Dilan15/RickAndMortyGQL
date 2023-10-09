@@ -11,3 +11,13 @@
         grid-template-columns: 320px;
     }
 }
+
+.green{
+    background: green;
+    color: white;
+}
+
+.red{
+    background: red;
+    color: white;
+}
